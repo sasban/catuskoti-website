@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catuṣkoṭi</title>
+  <meta name="keywords" content="Catuskoti, Sri Lanka, technology, AI, sustainability, tea, recycling, gems, Chakrasuthra, Huey, ESL, Kadda">
+  <meta property="og:title" content="Catuṣkoṭi">
+  <meta name="description" content="Crafting Intelligence for Everyday Impact">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://catuskoti.com/Images/catuskotilogo_new.png">
+  <meta property="og:url" content="https://catuskoti.com">
+  <meta name="author" content="catuskoti">
+  <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      height: 100%; margin: 0; font-family: 'Inter', sans-serif;
+      color: white; background: transparent;
+    }
+    #myVideo {
+      position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%;
+      z-index: -3; object-fit: cover;
+    }
+    #videoOverlay {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6); z-index: -2;
+    }
+    header {
+      position: fixed; top: 0; left: 0; right: 0; padding: 1rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 10; transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    }
+    header.scrolled {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    header .nav a {
+      color: white; margin-left: 1.5rem; text-decoration: none; font-weight: 500;
+    }
+    .main-content {
+      margin-top: 6rem; padding: 2rem; max-width: 720px;
+      margin-left: auto; margin-right: auto; text-align: center;
+    }
+    .main-content h1 { font-size: 3rem; font-weight: 600; margin-bottom: 1.5rem; }
+    .main-content p { font-size: 1.25rem; margin-bottom: 2rem; }
+    .form-control {
+      background-color: rgba(255, 255, 255, 0.1); border: none; color: white;
+    }
+    .form-control:focus {
+      background-color: rgba(255, 255, 255, 0.2); color: white;
+    }
+    .form-label { font-weight: 500; margin-bottom: 0.5rem; }
+    .form-section {
+      background-color: rgba(255,255,255,0.05); border-radius: 12px;
+      padding: 2rem; margin-top: 2rem;
+    }
+    .btn-primary {
+      background-color: #ffffff; color: #000; border: none;
+      transition: transform 0.2s ease;
+    }
+    .btn-primary:hover { transform: scale(1.05); }
+    footer {
+      font-size: 0.95rem; color: rgba(255,255,255,0.6);
+      text-align: center; padding: 2rem 1rem 1rem; background: transparent;
+    }
+    a.text-white { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop playsinline id="myVideo" aria-label="Background video: intelligent systems and innovation in Sri Lanka">
+    <source src="Images/header.mp4" type="video/mp4">
+    <p>Your browser does not support the video tag. Background video: intelligent systems from Sri Lanka.</p>
+  </video>
+  <div id="videoOverlay"></div>
+  <header>
+    <div class="logo text-white fw-bold">Catuṣkoṭi</div>
+    <nav class="nav">
+      <a href="#contact" aria-label="Jump to contact form">Contact</a>
+    </nav>
+  </header>
+  <main class="main-content">
+    <h1>Crafting Intelligence for Everyday Impact</h1>
+    <p>Catuṣkoṭi builds tools that bridge science, sustainability, and society. From tea, to recycling, to gems — rooted in Sri Lanka, guided by context.</p>
+    <script>
+      window.addEventListener('scroll', function () {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+    </script>
+
+
+    <section class="my-5" id="focus">
+        <h2 class="mb-4">What We Do</h2>
+        <div class="row g-4 text-start">
+          <div class="col-md-4">
+            <h5>Intelligent Sensing</h5>
+            <p>We develop sensor platforms that quantify quality — from tea leaves to textiles — in real time.</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Resource Tech</h5>
+            <p>We reimagine how resources flow — whether it’s minerals, water, or plastic — using embedded systems and community networks.</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Human Interfaces</h5>
+            <p>We build tools that ordinary people can use — smart, simple, and built for the field.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="my-5" id="products">
+        <h2 class="mb-4">Our Products & Partnerships</h2>
+        <div class="row g-4 text-start">
+
+          <div class="col-md-6">
+            <a href="https://huey.science" target="_blank" rel="noopener"
+               onclick="window.open(this.href, '_blank', 'left=20,top=20,width=900,height=600,toolbar=1,resizable=1'); return false;"
+               class="text-decoration-none">
+              <div class="p-4 bg-dark bg-opacity-25 rounded shadow-sm h-100 text-white">
+                <h5>Huey™</h5>
+                <p>Autonomation (automation with a human touch) for industry — from tea grading to colour physics.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-6">
+            <a href="https://spokenesl.com" target="_blank" rel="noopener"
+               onclick="window.open(this.href, '_blank', 'left=20,top=20,width=900,height=600,toolbar=1,resizable=1'); return false;"
+               class="text-decoration-none">
+              <div class="p-4 bg-dark bg-opacity-25 rounded shadow-sm h-100 text-white">
+                <h5>Spoken ESL</h5>
+                <p>English language learning tools designed for Sinhala speakers — intuitive, simple, and accessible.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-6">
+            <a href="https://kadda.online" target="_blank" rel="noopener"
+               onclick="window.open(this.href, '_blank', 'left=20,top=20,width=900,height=600,toolbar=1,resizable=1'); return false;"
+               class="text-decoration-none">
+              <div class="p-4 bg-dark bg-opacity-25 rounded shadow-sm h-100 text-white">
+                <h5>Kadda Online</h5>
+                <p>A quick, clean online Sinhala–English dictionary built for daily use across devices.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-6">
+            <a href="https://www.chakrasuthra.lk" target="_blank" rel="noopener"
+               onclick="window.open(this.href, '_blank', 'left=20,top=20,width=900,height=600,toolbar=1,resizable=1'); return false;"
+               class="text-decoration-none">
+              <div class="p-4 bg-dark bg-opacity-25 rounded shadow-sm h-100 text-white">
+                <h5>Chakra Suthra</h5>
+                <p>Innovative zero-waste solutions for Sri Lankan homes and businesses — closing loops at scale.</p>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+
+
+      <section class="my-5" id="about">
+        <h2 class="mb-4">Why We Exist</h2>
+        <p class="text-start">Catuṣkoṭi is built on a single tension: what is measurable versus what matters. Our name — borrowed from an ancient logic — reflects our curiosity about ambiguity, context, and contradiction. We believe every problem worth solving needs both rigor and reflection.</p>
+      </section>
+
+      <div class="form-section" id="contact">
+      <h2 class="mb-4">We'd love to hear from you!</h2>
+      <form method="POST" action="https://formsubmit.co/contactus@catuskoti.com">
+        <!-- Contact form is handled by FormSubmit (free, no server needed). Messages arrive at contactus@catuskoti.com -->
+        <input type="hidden" name="_subject" value="New message from catuskoti.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" id="formNext" value="https://catuskoti.com/thanks.html">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="mb-3 text-start">
+          <label for="fullName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="fullName" name="name" required>
+        </div>
+        <div class="mb-3 text-start">
+          <label for="emailAddress" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="emailAddress" name="email" required>
+        </div>
+        <div class="mb-3 text-start">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Catuṣkoṭi Pvt Ltd. All rights reserved.</p>
+    <p>contactus@catuskoti.com | Level 12, One Galle Face Tower, 1A, 02 Centre Road, Colombo 00200, Sri Lanka.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Send visitors back to this site's thank-you page after the form is submitted
+    document.getElementById('formNext').value = window.location.origin + '/thanks.html';
+  </script>
+</body>
+</html>
