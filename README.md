@@ -7,7 +7,7 @@ The Catuṣkoṭi company website: a single static page with no server code.
 - `thanks.html` is the page shown after someone sends the contact form.
 
 ## How changes go live
-This repo is connected to Cloudflare Pages. Every change pushed to the `main` branch is published to catuskoti.com automatically within about a minute.
+This repo is published with GitHub Pages (Settings → Pages, branch `main`). Every change pushed to the `main` branch is published to catuskoti.com automatically within about a minute.
 
 ## Contact form
 The form posts to [FormSubmit](https://formsubmit.co), a free service, and messages arrive at contactus@catuskoti.com. To change the address, edit the form's `action` in `index.html`.
