@@ -3,210 +3,270 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catuṣkoṭi</title>
-  <meta name="keywords" content="Catuskoti, Sri Lanka, technology, AI, sustainability, tea, recycling, gems, Chakrasuthra, Huey, ESL, Kadda">
-  <meta property="og:title" content="Catuṣkoṭi">
-  <meta name="description" content="Crafting Intelligence for Everyday Impact">
+  <title>Catuṣkoṭi — Measure what can be measured. Respect what can’t.</title>
+  <meta name="description" content="Catuṣkoṭi builds instruments, materials and everyday tools where science meets real life in Sri Lanka — tea and colour measurement, Ceylon gemstones, water and waste, and tools for families.">
+  <meta name="keywords" content="Catuskoti, Sri Lanka, technology, sustainability, tea, colour measurement, Huey, Ceylon gemstones, Teja, wastewater treatment, Chakra Suthra, Kadda">
+  <meta name="author" content="Catuṣkoṭi (Pvt) Ltd">
   <meta property="og:type" content="website">
+  <meta property="og:title" content="Catuṣkoṭi">
+  <meta property="og:description" content="Measure what can be measured. Respect what can’t.">
   <meta property="og:image" content="https://catuskoti.com/Images/catuskotilogo_new.png">
   <meta property="og:url" content="https://catuskoti.com">
-  <meta name="author" content="catuskoti">
-  <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; }
-    html, body {
-      height: 100%; margin: 0; font-family: 'Inter', sans-serif;
-      color: white; background: transparent;
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #0F1513; }
+    a { color: #ECE8DF; } a:hover { color: #FFFFFF; }
+    #founder a { color: #0F1513; }
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid #D9A441; outline-offset: 3px; }
+    @media (max-width: 640px) {
+      h1 { font-size: 46px !important; }
+      h2 { font-size: 38px !important; }
+      section > div, section, header > div, footer > div { padding-left: 20px !important; padding-right: 20px !important; }
+      form { padding: 24px !important; }
     }
-    #myVideo {
-      position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%;
-      z-index: -3; object-fit: cover;
-    }
-    #videoOverlay {
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6); z-index: -2;
-    }
-    header {
-      position: fixed; top: 0; left: 0; right: 0; padding: 1rem 2rem;
-      display: flex; justify-content: space-between; align-items: center;
-      z-index: 10; transition: box-shadow 0.3s ease, background-color 0.3s ease;
-    }
-    header.scrolled {
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-    header .nav a {
-      color: white; margin-left: 1.5rem; text-decoration: none; font-weight: 500;
-    }
-    .main-content {
-      margin-top: 6rem; padding: 2rem; max-width: 720px;
-      margin-left: auto; margin-right: auto; text-align: center;
-    }
-    .main-content h1 { font-size: 3rem; font-weight: 600; margin-bottom: 1.5rem; }
-    .main-content p { font-size: 1.25rem; margin-bottom: 2rem; }
-    .form-control {
-      background-color: rgba(255, 255, 255, 0.1); border: none; color: white;
-    }
-    .form-control:focus {
-      background-color: rgba(255, 255, 255, 0.2); color: white;
-    }
-    .form-label { font-weight: 500; margin-bottom: 0.5rem; }
-    .form-section {
-      background-color: rgba(255,255,255,0.05); border-radius: 12px;
-      padding: 2rem; margin-top: 2rem;
-    }
-    .btn-primary {
-      background-color: #ffffff; color: #000; border: none;
-      transition: transform 0.2s ease;
-    }
-    .btn-primary:hover { transform: scale(1.05); }
-    footer {
-      font-size: 0.95rem; color: rgba(255,255,255,0.6);
-      text-align: center; padding: 2rem 1rem 1rem; background: transparent;
-    }
-    a.text-white { text-decoration: underline; }
   </style>
 </head>
 <body>
-  <video autoplay muted loop playsinline id="myVideo" aria-label="Background video: intelligent systems and innovation in Sri Lanka">
-    <source src="Images/header.mp4" type="video/mp4">
-    <p>Your browser does not support the video tag. Background video: intelligent systems from Sri Lanka.</p>
-  </video>
-  <div id="videoOverlay"></div>
-  <header>
-    <div class="logo text-white fw-bold">Catuṣkoṭi</div>
-    <nav class="nav">
-      <a href="#contact" aria-label="Jump to contact form">Contact</a>
-    </nav>
-  </header>
-  <main class="main-content">
-    <h1>Crafting Intelligence for Everyday Impact</h1>
-    <p>Catuṣkoṭi builds tools that bridge science, sustainability, and society. From tea, to recycling, to gems — rooted in Sri Lanka, guided by context.</p>
-    <script>
-      window.addEventListener('scroll', function () {
-        const header = document.querySelector('header');
-        if (window.scrollY > 50) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
-      });
-    </script>
+<div style="background: #0F1513; color: #ECE8DF; font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 17px; line-height: 1.6; min-height: 100vh">
 
-
-    <section class="my-5" id="focus">
-        <h2 class="mb-4">What We Do</h2>
-        <div class="row g-4 text-start">
-          <div class="col-md-4">
-            <h5>Intelligent Sensing</h5>
-            <p>We develop sensor platforms that quantify quality — from tea leaves to textiles — in real time.</p>
-          </div>
-          <div class="col-md-4">
-            <h5>Resource Tech</h5>
-            <p>We reimagine how resources flow — whether it’s minerals, water, or plastic — using embedded systems and community networks.</p>
-          </div>
-          <div class="col-md-4">
-            <h5>Human Interfaces</h5>
-            <p>We build tools that ordinary people can use — smart, simple, and built for the field.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="my-5" id="products">
-        <h2 class="mb-4">Our Products & Partnerships</h2>
-        <div class="row g-4 text-start">
-
-          <div class="col-md-6">
-            <a href="https://huey.science" target="_blank" rel="noopener"
-               onclick="window.open(this.href, '_blank', 'left=20,top=20,width=900,height=600,toolbar=1,resizable=1'); return false;"
-               class="text-decoration-none">
-              <div class="p-4 bg-dark bg-opacity-25 rounded shadow-sm h-100 text-white">
-                <h5>Huey™</h5>
-                <p>Autonomation (automation with a human touch) for industry — from tea grading to colour physics.</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-6">
-            <a href="https://spokenesl.com" target="_blank" rel="noopener"
-               onclick="window.open(this.href, '_blank', 'left=20,top=20,width=900,height=600,toolbar=1,resizable=1'); return false;"
-               class="text-decoration-none">
-              <div class="p-4 bg-dark bg-opacity-25 rounded shadow-sm h-100 text-white">
-                <h5>Spoken ESL</h5>
-                <p>English language learning tools designed for Sinhala speakers — intuitive, simple, and accessible.</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-6">
-            <a href="https://kadda.online" target="_blank" rel="noopener"
-               onclick="window.open(this.href, '_blank', 'left=20,top=20,width=900,height=600,toolbar=1,resizable=1'); return false;"
-               class="text-decoration-none">
-              <div class="p-4 bg-dark bg-opacity-25 rounded shadow-sm h-100 text-white">
-                <h5>Kadda Online</h5>
-                <p>A quick, clean online Sinhala–English dictionary built for daily use across devices.</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-6">
-            <a href="https://www.chakrasuthra.lk" target="_blank" rel="noopener"
-               onclick="window.open(this.href, '_blank', 'left=20,top=20,width=900,height=600,toolbar=1,resizable=1'); return false;"
-               class="text-decoration-none">
-              <div class="p-4 bg-dark bg-opacity-25 rounded shadow-sm h-100 text-white">
-                <h5>Chakra Suthra</h5>
-                <p>Innovative zero-waste solutions for Sri Lankan homes and businesses — closing loops at scale.</p>
-              </div>
-            </a>
-          </div>
-
-        </div>
-      </section>
-
-
-
-      <section class="my-5" id="about">
-        <h2 class="mb-4">Why We Exist</h2>
-        <p class="text-start">Catuṣkoṭi is built on a single tension: what is measurable versus what matters. Our name — borrowed from an ancient logic — reflects our curiosity about ambiguity, context, and contradiction. We believe every problem worth solving needs both rigor and reflection.</p>
-      </section>
-
-      <div class="form-section" id="contact">
-      <h2 class="mb-4">We'd love to hear from you!</h2>
-      <form method="POST" action="https://formsubmit.co/contactus@catuskoti.com">
-        <!-- Contact form is handled by FormSubmit (free, no server needed). Messages arrive at contactus@catuskoti.com -->
-        <input type="hidden" name="_subject" value="New message from catuskoti.com">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" id="formNext" value="https://catuskoti.com/thanks.html">
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-        <div class="mb-3 text-start">
-          <label for="fullName" class="form-label">Full Name</label>
-          <input type="text" class="form-control" id="fullName" name="name" required>
-        </div>
-        <div class="mb-3 text-start">
-          <label for="emailAddress" class="form-label">Email Address</label>
-          <input type="email" class="form-control" id="emailAddress" name="email" required>
-        </div>
-        <div class="mb-3 text-start">
-          <label for="message" class="form-label">Message</label>
-          <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary w-100">Send Message</button>
-      </form>
+  <!-- Header -->
+  <header style="border-bottom: 1px solid rgba(236,232,223,0.12)">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 22px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+      <a href="#top" style="text-decoration: none; display: flex; align-items: center; gap: 12px">
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="1" y="1" width="26" height="26" fill="none" stroke="#ECE8DF" stroke-width="1.2"></rect><line x1="14" y1="1" x2="14" y2="27" stroke="#ECE8DF" stroke-width="1.2"></line><line x1="1" y1="14" x2="27" y2="14" stroke="#ECE8DF" stroke-width="1.2"></line><rect x="15.5" y="15.5" width="10" height="10" fill="#D9A441"></rect></svg>
+        <span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 28px; letter-spacing: 0.01em; color: #ECE8DF">Catuṣkoṭi</span>
+      </a>
+      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 15px">
+        <a href="#work" style="text-decoration: none; padding: 10px 0">Work</a>
+        <a href="#advisory" style="text-decoration: none; padding: 10px 0">Advisory</a>
+        <a href="#approach" style="text-decoration: none; padding: 10px 0">Approach</a>
+        <a href="#founder" style="text-decoration: none; padding: 10px 0">Founder</a>
+        <a href="#contact" style="text-decoration: none; padding: 10px 0">Contact</a>
+      </nav>
     </div>
-  </main>
+  </header>
 
-  <footer>
-    <p>&copy; 2026 Catuṣkoṭi Pvt Ltd. All rights reserved.</p>
-    <p>contactus@catuskoti.com | Level 12, One Galle Face Tower, 1A, 02 Centre Road, Colombo 00200, Sri Lanka.</p>
+  <!-- Hero -->
+  <section id="top" style="max-width: 1240px; margin: 0 auto; padding: 96px 32px 88px; display: flex; flex-wrap: wrap; gap: 64px; align-items: center">
+    <div style="flex: 999 1 520px; min-width: 0">
+      <p style="margin: 0 0 28px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #A9B2AC">Colombo · Ratnapura · Sri Lanka</p>
+      <h1 style="margin: 0 0 28px; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 76px; line-height: 1.02; letter-spacing: -0.01em">Measure what can be measured. <em style="color: #D9A441">Respect what can’t.</em></h1>
+      <p style="margin: 0 0 40px; max-width: 600px; font-size: 20px; color: #C9CEC8">Catuṣkoṭi builds instruments, materials and everyday tools where science meets real life in Sri Lanka — from a cup of tea, to a gem from the earth, to a family’s weekly schedule.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px">
+        <a href="#work" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 26px; background: #ECE8DF; color: #0F1513; text-decoration: none; font-weight: 600; font-size: 15px">See our work</a>
+        <a href="#contact" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 26px; border: 1px solid rgba(236,232,223,0.4); color: #ECE8DF; text-decoration: none; font-weight: 500; font-size: 15px">Talk to us</a>
+      </div>
+    </div>
+
+    <!-- Tetralemma -->
+    <figure style="flex: 1 1 380px; max-width: 460px; margin: 0">
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1px solid rgba(236,232,223,0.3)">
+        <div style="padding: 26px 24px; min-height: 170px; border-right: 1px solid rgba(236,232,223,0.3); border-bottom: 1px solid rgba(236,232,223,0.3); display: flex; flex-direction: column; justify-content: space-between; gap: 16px">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #A9B2AC">I · ASTI</span>
+          <div><div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 30px; line-height: 1.1">It is</div><div style="font-size: 14px; color: #A9B2AC; margin-top: 6px">What the instrument tells us.</div></div>
+        </div>
+        <div style="padding: 26px 24px; min-height: 170px; border-bottom: 1px solid rgba(236,232,223,0.3); display: flex; flex-direction: column; justify-content: space-between; gap: 16px">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #A9B2AC">II · NĀSTI</span>
+          <div><div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 30px; line-height: 1.1">It is not</div><div style="font-size: 14px; color: #A9B2AC; margin-top: 6px">What the instrument misses.</div></div>
+        </div>
+        <div style="padding: 26px 24px; min-height: 170px; border-right: 1px solid rgba(236,232,223,0.3); display: flex; flex-direction: column; justify-content: space-between; gap: 16px">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #A9B2AC">III · UBHAYA</span>
+          <div><div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 30px; line-height: 1.1">Both</div><div style="font-size: 14px; color: #A9B2AC; margin-top: 6px">Science and craft, held together.</div></div>
+        </div>
+        <div style="padding: 26px 24px; min-height: 170px; background: #D9A441; color: #0F1513; display: flex; flex-direction: column; justify-content: space-between; gap: 16px">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #0F1513">IV · NAIVA</span>
+          <div><div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 30px; line-height: 1.1">Neither</div><div style="font-size: 14px; color: #0F1513; margin-top: 6px">Question the frame itself.</div></div>
+        </div>
+      </div>
+      <figcaption style="margin-top: 14px; font-size: 13px; color: #A9B2AC">The catuṣkoṭi — the four-cornered logic of early Buddhist and Indian thought — and our name.</figcaption>
+    </figure>
+  </section>
+
+  <!-- Name band -->
+  <section style="border-top: 1px solid rgba(236,232,223,0.12); border-bottom: 1px solid rgba(236,232,223,0.12); background: #141C19">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 56px 32px; display: flex; flex-wrap: wrap; gap: 24px 64px; align-items: baseline">
+      <p style="flex: 1 1 220px; margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #A9B2AC">Why the name</p>
+      <p style="flex: 999 1 560px; margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 34px; line-height: 1.3">Most real problems have more than two answers. We build on a single tension: <span style="color: #D9A441">what is measurable</span> versus <span style="color: #D9A441">what matters</span> — and we need both rigour and reflection to get it right.</p>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work" style="max-width: 1240px; margin: 0 auto; padding: 112px 32px 64px">
+    <div style="display: flex; flex-wrap: wrap; gap: 16px 64px; align-items: flex-end; justify-content: space-between; margin-bottom: 56px">
+      <div style="flex: 1 1 520px">
+        <p style="margin: 0 0 16px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #A9B2AC">Our work</p>
+        <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 56px; line-height: 1.05">Four corners of one practice</h2>
+      </div>
+      <p style="flex: 1 1 360px; margin: 0; max-width: 460px; color: #C9CEC8">Different industries, one habit of mind: measure carefully, build simply, and stay honest about what we don’t yet know.</p>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 1px; background: rgba(236,232,223,0.16); border: 1px solid rgba(236,232,223,0.16)">
+
+      <article style="flex: 1 1 520px; background: #0F1513; padding: 40px; display: flex; flex-direction: column; gap: 18px; min-height: 320px">
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.1em; color: #D9A441">01 · SENSING</span>
+          <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="#ECE8DF" stroke-width="1.2"></circle><circle cx="20" cy="20" r="7" fill="none" stroke="#ECE8DF" stroke-width="1.2"></circle><line x1="20" y1="2" x2="20" y2="9" stroke="#ECE8DF" stroke-width="1.2"></line><line x1="20" y1="31" x2="20" y2="38" stroke="#ECE8DF" stroke-width="1.2"></line></svg>
+        </div>
+        <h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 40px; line-height: 1.1">Huey™</h3>
+        <p style="margin: 0; color: #C9CEC8">Autonomation — automation with a human touch — for industry. Instruments that grade tea and read colour the way an expert does, consistently, every time.</p>
+        <a href="https://huey.science" style="margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-weight: 500; text-decoration: none; border-bottom: 1px solid rgba(236,232,223,0.4)">huey.science <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article style="flex: 1 1 520px; background: #0F1513; padding: 40px; display: flex; flex-direction: column; gap: 18px; min-height: 320px">
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.1em; color: #D9A441">02 · EARTH</span>
+          <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><polygon points="20,3 35,15 20,37 5,15" fill="none" stroke="#ECE8DF" stroke-width="1.2"></polygon><polyline points="5,15 35,15" fill="none" stroke="#ECE8DF" stroke-width="1.2"></polyline><polyline points="13,15 20,3 27,15 20,37 13,15" fill="none" stroke="#ECE8DF" stroke-width="1.2"></polyline></svg>
+        </div>
+        <h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 40px; line-height: 1.1">Téja</h3>
+        <p style="margin: 0; color: #C9CEC8">Mine-to-market Ceylon gemstones from our family’s mines in Ratnapura. Most of our stones are unheated, every treatment is disclosed, and key stones are independently certified.</p>
+        <a href="https://tejagems.com" style="margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-weight: 500; text-decoration: none; border-bottom: 1px solid rgba(236,232,223,0.4)">tejagems.com <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article style="flex: 1 1 520px; background: #0F1513; padding: 40px; display: flex; flex-direction: column; gap: 18px; min-height: 320px">
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.1em; color: #D9A441">03 · WATER &amp; RESOURCES</span>
+          <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4 C 27 14, 32 20, 32 26 A 12 12 0 0 1 8 26 C 8 20, 13 14, 20 4 Z" fill="none" stroke="#ECE8DF" stroke-width="1.2"></path><path d="M14 27 A 6 6 0 0 0 20 32" fill="none" stroke="#ECE8DF" stroke-width="1.2"></path></svg>
+        </div>
+        <h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 40px; line-height: 1.1">Water &amp; waste</h3>
+        <p style="margin: 0; color: #C9CEC8">Advisory on wastewater treatment for residential plants, and a partnership with Chakra Suthra on zero-waste systems for Sri Lankan homes and businesses — closing loops at scale.</p>
+        <a href="https://www.chakrasuthra.lk" style="margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-weight: 500; text-decoration: none; border-bottom: 1px solid rgba(236,232,223,0.4)">chakrasuthra.lk <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article style="flex: 1 1 520px; background: #0F1513; padding: 40px; display: flex; flex-direction: column; gap: 18px; min-height: 320px">
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.1em; color: #D9A441">04 · PEOPLE</span>
+          <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="8" width="30" height="24" fill="none" stroke="#ECE8DF" stroke-width="1.2"></rect><line x1="5" y1="15" x2="35" y2="15" stroke="#ECE8DF" stroke-width="1.2"></line><line x1="13" y1="4" x2="13" y2="11" stroke="#ECE8DF" stroke-width="1.2"></line><line x1="27" y1="4" x2="27" y2="11" stroke="#ECE8DF" stroke-width="1.2"></line></svg>
+        </div>
+        <h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 40px; line-height: 1.1">Everyday tools</h3>
+        <p style="margin: 0; color: #C9CEC8">Tools ordinary people can use. <strong style="color: #ECE8DF; font-weight: 600">Catuṣkoṭi Sync</strong> (pilot) turns forwarded school and tuition messages into one calm family schedule. <strong style="color: #ECE8DF; font-weight: 600">Kadda Online</strong> is a fast Sinhala–English dictionary for everyday use.</p>
+        <div style="margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px 28px">
+          <a href="https://kadda.online" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-weight: 500; text-decoration: none; border-bottom: 1px solid rgba(236,232,223,0.4)">kadda.online <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Advisory -->
+  <section id="advisory" style="background: #141C19; border-top: 1px solid rgba(236,232,223,0.12); border-bottom: 1px solid rgba(236,232,223,0.12)">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 96px 32px; display: flex; flex-wrap: wrap; gap: 48px 80px">
+      <div style="flex: 1 1 380px">
+        <p style="margin: 0 0 16px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #A9B2AC">Advisory</p>
+        <h2 style="margin: 0 0 24px; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 56px; line-height: 1.05">We also advise teams running real plants.</h2>
+        <p style="margin: 0 0 32px; color: #C9CEC8; max-width: 480px">Hands-on technical advice where chemistry meets operations — wastewater treatment, process quality and manufacturing. We work alongside your people on site, find what the numbers are really saying, and leave the plant easier to run.</p>
+        <a href="#contact" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 26px; border: 1px solid rgba(236,232,223,0.4); color: #ECE8DF; text-decoration: none; font-weight: 500; font-size: 15px">Start a conversation</a>
+      </div>
+      <div style="flex: 1 1 460px">
+        <p style="margin: 0 0 18px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #A9B2AC">SELECTED CLIENTS &amp; COLLABORATORS</p>
+        <ul style="list-style: none; margin: 0; padding: 0; border-top: 1px solid rgba(236,232,223,0.2)">
+          <li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 24px; padding: 20px 0; border-bottom: 1px solid rgba(236,232,223,0.2)"><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 28px">ICC</span><span style="color: #A9B2AC; font-size: 15px; align-self: center">Water treatment</span></li>
+          <li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 24px; padding: 20px 0; border-bottom: 1px solid rgba(236,232,223,0.2)"><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 28px">Harris &amp; Menuk</span><span style="color: #A9B2AC; font-size: 15px; align-self: center">Consulting</span></li>
+          <li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 24px; padding: 20px 0; border-bottom: 1px solid rgba(236,232,223,0.2)"><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 28px">Hemas Manufacturing</span><span style="color: #A9B2AC; font-size: 15px; align-self: center">Manufacturing</span></li>
+          <li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 24px; padding: 20px 0; border-bottom: 1px solid rgba(236,232,223,0.2)"><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 28px">Van Rees</span><span style="color: #A9B2AC; font-size: 15px; align-self: center">Tea · Huey pilot</span></li>
+          <li style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 24px; padding: 20px 0; border-bottom: 1px solid rgba(236,232,223,0.2)"><span style="font-family: 'Instrument Serif', Georgia, serif; font-size: 28px">Tetley</span><span style="color: #A9B2AC; font-size: 15px; align-self: center">Tea</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approach -->
+  <section id="approach" style="max-width: 1240px; margin: 0 auto; padding: 96px 32px">
+    <p style="margin: 0 0 16px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #A9B2AC">How we work</p>
+    <h2 style="margin: 0 0 56px; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 56px; line-height: 1.05; max-width: 760px">Rigour in the lab. Humility in the field.</h2>
+    <ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 48px 40px">
+      <li style="flex: 1 1 240px; border-top: 1px solid rgba(236,232,223,0.3); padding-top: 24px">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #D9A441; margin-bottom: 14px">I</div>
+        <h3 style="margin: 0 0 10px; font-size: 21px; font-weight: 600">Evidence before claims</h3>
+        <p style="margin: 0; color: #C9CEC8; font-size: 16px">We test before we say. Spectroscopy, refractometry and independent laboratories come first; marketing comes later.</p>
+      </li>
+      <li style="flex: 1 1 240px; border-top: 1px solid rgba(236,232,223,0.3); padding-top: 24px">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #D9A441; margin-bottom: 14px">II</div>
+        <h3 style="margin: 0 0 10px; font-size: 21px; font-weight: 600">Built for the field</h3>
+        <p style="margin: 0; color: #C9CEC8; font-size: 16px">Designed for Sri Lankan conditions — the tea factory, the mine pit, the treatment plant, the school WhatsApp group.</p>
+      </li>
+      <li style="flex: 1 1 240px; border-top: 1px solid rgba(236,232,223,0.3); padding-top: 24px">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #D9A441; margin-bottom: 14px">III</div>
+        <h3 style="margin: 0 0 10px; font-size: 21px; font-weight: 600">Simple enough to use</h3>
+        <p style="margin: 0; color: #C9CEC8; font-size: 16px">The fewest moving parts that do the job. If people need a manual, we have not finished.</p>
+      </li>
+      <li style="flex: 1 1 240px; border-top: 1px solid rgba(236,232,223,0.3); padding-top: 24px">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #D9A441; margin-bottom: 14px">IV</div>
+        <h3 style="margin: 0 0 10px; font-size: 21px; font-weight: 600">Honest about uncertainty</h3>
+        <p style="margin: 0; color: #C9CEC8; font-size: 16px">We say what we know, what we don’t, and what lies in between — on a gem report or in a project plan.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Founder -->
+  <section id="founder" style="background: #ECE8DF; color: #0F1513">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 104px 32px; display: flex; flex-wrap: wrap; gap: 48px 80px">
+      <div style="flex: 1 1 280px">
+        <p style="margin: 0 0 16px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #4A524D">Founder</p>
+        <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 56px; line-height: 1.05">Sasanka Bandara</h2>
+      </div>
+      <div style="flex: 999 1 560px; min-width: 0">
+        <p style="margin: 0 0 24px; font-family: 'Instrument Serif', Georgia, serif; font-size: 30px; line-height: 1.35">A chemist by training and a second-generation gem miner from Ratnapura, Sasanka founded Catuṣkoṭi to work where science, natural resources and everyday life meet.</p>
+        <p style="margin: 0 0 36px; font-size: 18px; color: #2E3531">Before Catuṣkoṭi he was General Manager for Sri Lanka and Bangladesh at MAS Brands. Today he leads the company’s ventures hands-on — from the gem lab and the mine to the code behind its tools.</p>
+        <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0; border-top: 1px solid rgba(15,21,19,0.25)">
+          <li style="flex: 1 1 220px; padding: 18px 20px 18px 0; border-bottom: 1px solid rgba(15,21,19,0.25)"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #4A524D">BSC (HONS) CHEMISTRY</div><div style="font-size: 16px; margin-top: 4px">University of Colombo</div></li>
+          <li style="flex: 1 1 220px; padding: 18px 20px 18px 0; border-bottom: 1px solid rgba(15,21,19,0.25)"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #4A524D">MBA</div><div style="font-size: 16px; margin-top: 4px">University of Sheffield</div></li>
+          <li style="flex: 1 1 220px; padding: 18px 20px 18px 0; border-bottom: 1px solid rgba(15,21,19,0.25)"><div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: #4A524D">ADVANCED MANAGEMENT PROGRAM</div><div style="font-size: 16px; margin-top: 4px">Columbia Business School</div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" style="max-width: 1240px; margin: 0 auto; padding: 112px 32px 96px; display: flex; flex-wrap: wrap; gap: 56px 80px">
+    <div style="flex: 1 1 360px">
+      <p style="margin: 0 0 16px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #A9B2AC">Contact</p>
+      <h2 style="margin: 0 0 24px; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 56px; line-height: 1.05">Bring us a hard question.</h2>
+      <p style="margin: 0 0 36px; color: #C9CEC8; max-width: 440px">A measurement problem, a resource you want to use better, or an idea that needs building. We read every message.</p>
+      <dl style="margin: 0; display: flex; flex-direction: column; gap: 20px">
+        <div><dt style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #A9B2AC">EMAIL</dt><dd style="margin: 4px 0 0"><a href="mailto:contactus@catuskoti.com" style="font-size: 19px">contactus@catuskoti.com</a></dd></div>
+        <div><dt style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #A9B2AC">OFFICE</dt><dd style="margin: 4px 0 0; font-size: 17px">54, Kitulwatta Road<br>Colombo 08, Sri Lanka</dd></div>
+      </dl>
+    </div>
+    <form method="POST" action="https://formsubmit.co/contactus@catuskoti.com" style="flex: 1 1 460px; display: flex; flex-direction: column; gap: 22px; background: #141C19; border: 1px solid rgba(236,232,223,0.14); padding: 40px">
+      <!-- Contact form is handled by FormSubmit (free, no server). Messages go to contactus@catuskoti.com -->
+      <input type="hidden" name="_subject" value="New message from catuskoti.com">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" id="formNext" value="https://catuskoti.com/thanks.html">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <label for="c-name" style="font-size: 14px; font-weight: 500">Full name</label>
+        <input id="c-name" name="name" type="text" required style="min-height: 48px; padding: 0 14px; background: #0F1513; color: #ECE8DF; border: 1px solid rgba(236,232,223,0.3); font: inherit">
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <label for="c-email" style="font-size: 14px; font-weight: 500">Email address</label>
+        <input id="c-email" name="email" type="email" required style="min-height: 48px; padding: 0 14px; background: #0F1513; color: #ECE8DF; border: 1px solid rgba(236,232,223,0.3); font: inherit">
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <label for="c-msg" style="font-size: 14px; font-weight: 500">Message</label>
+        <textarea id="c-msg" name="message" rows="5" required style="padding: 12px 14px; background: #0F1513; color: #ECE8DF; border: 1px solid rgba(236,232,223,0.3); font: inherit; resize: vertical"></textarea>
+      </div>
+      <button type="submit" style="min-height: 52px; background: #D9A441; color: #0F1513; border: none; font: inherit; font-weight: 600; cursor: pointer">Send message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer style="border-top: 1px solid rgba(236,232,223,0.12)">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 32px; display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; font-size: 14px; color: #A9B2AC">
+      <span>© 2026 Catuṣkoṭi (Pvt) Ltd · Reg. No. PV 00240773</span>
+      <span>Téja is a brand of Catuṣkoṭi (Pvt) Ltd</span>
+    </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Send visitors back to this site's thank-you page after the form is submitted
-    document.getElementById('formNext').value = new URL('thanks.html', window.location.href).href;
-  </script>
+</div>
+
+<script>
+  // After the contact form is sent, bring visitors back to this site's thank-you page
+  document.getElementById('formNext').value = new URL('thanks.html', window.location.href).href;
+</script>
 </body>
 </html>
